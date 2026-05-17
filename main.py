@@ -7,15 +7,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN = os.getenv("DISCORD_TOKEN")
-CLIENT_ID = os.getenv("DISCORD_CLIENT_ID")
 
 if not TOKEN:
     print("❌ Missing DISCORD_TOKEN environment variable.")
     exit(1)
 
-if not CLIENT_ID:
-    print("❌ Missing DISCORD_CLIENT_ID environment variable.")
-    exit(1)
 
 intents = discord.Intents.default()
 intents.members = True
